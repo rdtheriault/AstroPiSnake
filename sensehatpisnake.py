@@ -1,8 +1,8 @@
 #Martin O'Hanlon
 #www.stuffaboutcode.com
-#Astro Pi Snake
+#Astro Pi Snake => coverted to SenseHat by rdtheriault (super minor changes)
 from random import randint
-from astro_pi import AstroPi
+from sense_hat import SenseHat #change one
 from time import sleep
 import pygame
 from pygame.locals import *
@@ -21,7 +21,7 @@ class AstroPiSnake():
         pygame.init()
         pygame.display.set_mode((640, 480))
         
-        self.ap = AstroPi()
+        self.ap = SenseHat() #change two
         
     def startGame(self):
         self.ap.clear(self.BACKCOL)
